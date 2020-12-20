@@ -19,13 +19,10 @@
     <!-- abecedario -->
     <div class="col-6" id="alphabet">
         <h2>Letras Disponibles</h2>
-        <div id="remainLetters">
-            <span class="letter">
-                A
-            </span>
+        <div id="letrasRestantes">
         </div>
         <h2>Letras usadas</h2>
-        <div id="usedLetters">
+        <div id="letrasUsadas">
 
         </div>
     </div>

@@ -5,6 +5,7 @@
 </body>
 <script src="js/imports/popper.js"></script>
 <script src="js/imports/jquery.js"></script>
+<script src="js/functions.js"></script>
 <script src="js/main.js"></script>
 
 </html>
