@@ -1,7 +1,8 @@
-$(document).ready(function(){
-    let palabraSecreta = "Margarita le va a dar una moto a sebas";
-    palabraSecreta = palabraSecreta.toLowerCase();
-    crearLetrasRestantes();
-    encenderLetrasRestantes();
-    generarPalabraSecreta(palabraSecreta);
+$(document).ready(function () {
+  let jugador = JSON.parse($("#jugador").val());
+  let palabraSecreta = jugador.frase;
+  palabraSecreta = palabraSecreta.toLowerCase();
+  crearLetrasRestantes();
+  encenderLetrasRestantes();
+  generarPalabraSecreta(palabraSecreta);
 });

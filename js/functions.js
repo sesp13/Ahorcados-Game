@@ -76,16 +76,18 @@ function generarPalabraSecreta(frase) {
   let selector = $("#letrasOcultas");
   let fraseArray = frase.split(" ");
   fraseArray.forEach((palabra) => {
+    let plantillaPalabra = "<div class='palabra'>";
     palabraArray = palabra.split("");
     palabraArray.forEach((letra) => {
       let plantilla = `
-        <span class="letra-oculta letra-oculta-${letra}"> 
-          _
-        </span>
+      <span class="letra-oculta letra-oculta-${letra}"> 
+      _
+      </span>
       `;
-      selector.append(plantilla);
+      plantillaPalabra += plantilla;
     });
-    selector.append("<span class='letra-espacio'></span>");
+    plantillaPalabra += "</div>";
+    selector.append(plantillaPalabra);
   });
 }
 
@@ -98,6 +100,7 @@ function revelarLetraSecreta(letra) {
       elemento.removeClass(`letra-oculta-${letra}`);
       elemento.addClass("letra");
       elemento.text(letra);
+      comprobarGanador();
     });
   } else {
     mostrarEquivocacion();
@@ -133,4 +136,11 @@ function mostrarEquivocacion() {
 
 function mostrarPerdida(){
   alert("Has perdido!");
+}
+
+function comprobarGanador(){
+  let selector = $('.letra-oculta');
+  if(selector.length <= 0){
+    alert("Ganaste!");
+  }
 }

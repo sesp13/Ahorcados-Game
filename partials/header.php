@@ -11,3 +11,8 @@
 
 <body>
     <div class="container p-4">
+        <a href="index.php">
+            <h1 class="text-center">
+                El ahorcadito
+            </h1>
+        </a>

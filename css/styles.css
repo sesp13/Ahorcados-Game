@@ -1,4 +1,4 @@
-.letra  {
+.letra {
   padding: 5px;
   font-size: 30px;
   /* transition: all 500ms; */
@@ -10,18 +10,27 @@
   color: green;
 }
 
-.letra-usada{
-    color: red;
+.letra-usada {
+  color: red;
 }
 
-.letra-oculta{
-    font-size: 40px;
+.letra-oculta {
+  font-size: 40px;
 }
 
-.letra-espacio{
-    padding: 10px;
+.palabra {
+  display: inline-block;
+  margin-right: 25px;
 }
 
-#ahorcado-img{
+#ahorcado-img {
   width: 90%;
+}
+
+.intro-text{
+  font-size: 25px;
+}
+
+.word-link{
+  font-size: 30px;
 }
