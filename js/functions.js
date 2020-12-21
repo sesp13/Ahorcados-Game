@@ -104,7 +104,21 @@ function generarPalabraSecreta(frase) {
 }
 
 function comprobarCaracteresEspeciales(letra) {
-  let caracteres = [",", "!", "¡", ".", ":", "(", ")", "+", "-", ";", "[", "]", "'"];
+  let caracteres = [
+    ",",
+    "!",
+    "¡",
+    ".",
+    ":",
+    "(",
+    ")",
+    "+",
+    "-",
+    ";",
+    "[",
+    "]",
+    "'",
+  ];
   return caracteres.includes(letra);
 }
 
@@ -152,12 +166,43 @@ function mostrarEquivocacion() {
 }
 
 function mostrarPerdida() {
-  alert("Has perdido!");
+  let jugador = JSON.parse(localStorage.getItem("jugador"));
+  Swal.fire({
+    title: "Oops",
+    text: "Has perdido el juego",
+    icon: "error",
+  }).then(() => {
+    alertaFinalJugador();
+  });
 }
 
 function comprobarGanador() {
   let selector = $(".letra-oculta");
   if (selector.length <= 0) {
-    alert("Ganaste!");
+    Swal.fire({
+      title: "Buen trabajo!",
+      text: "Has ganado y adivinaste la palabra",
+      icon: "success",
+    }).then(() => {
+      alertaFinalJugador();
+    });
   }
+}
+
+function alertaFinalJugador() {
+  let jugador = JSON.parse(localStorage.getItem("jugador"));
+  let plantillaJugador = `
+    <div class="container">
+      <ul>
+        <li>La persona de la frase era: ${jugador.nombre}</li>
+        <li>La frase era: "<span class="font-italic">${jugador.frase}</span>" </li>
+      </ul>
+    </div>
+  `;
+  Swal.fire({
+    title: "Información final",
+    html: plantillaJugador,
+  }).then(() => {
+    location.href = "index.php";
+  });
 }
