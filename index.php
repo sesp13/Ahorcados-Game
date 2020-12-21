@@ -6,7 +6,7 @@ include_once 'helpers/setGame.php';
 <?php foreach ($espicificaciones as $index => $jugador) : ?>
     <p class="word-link">
         <a href="game.php?index=<?php echo $index ?>">
-            Frase <?php echo $index ?>
+            Frase <?php echo $index + 1 ?>
         </a>
     </p>
 <?php endforeach; ?>

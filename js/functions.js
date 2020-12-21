@@ -37,6 +37,13 @@ function alfabetoArray() {
     "8",
     "9",
     "0",
+    "¿",
+    "?",
+    "á",
+    "é",
+    "í",
+    "ó",
+    "ú",
   ];
 }
 
@@ -79,16 +86,26 @@ function generarPalabraSecreta(frase) {
     let plantillaPalabra = "<div class='palabra'>";
     palabraArray = palabra.split("");
     palabraArray.forEach((letra) => {
-      let plantilla = `
+      let plantilla = ``;
+      if (comprobarCaracteresEspeciales(letra)) {
+        plantilla = `<span class="letra">${letra}</span>`;
+      } else {
+        plantilla = `
       <span class="letra-oculta letra-oculta-${letra}"> 
       _
       </span>
       `;
+      }
       plantillaPalabra += plantilla;
     });
     plantillaPalabra += "</div>";
     selector.append(plantillaPalabra);
   });
+}
+
+function comprobarCaracteresEspeciales(letra) {
+  let caracteres = [",", "!", "¡", ".", ":", "(", ")", "+", "-", ";", "[", "]", "'"];
+  return caracteres.includes(letra);
 }
 
 function revelarLetraSecreta(letra) {
@@ -134,13 +151,13 @@ function mostrarEquivocacion() {
   }
 }
 
-function mostrarPerdida(){
+function mostrarPerdida() {
   alert("Has perdido!");
 }
 
-function comprobarGanador(){
-  let selector = $('.letra-oculta');
-  if(selector.length <= 0){
+function comprobarGanador() {
+  let selector = $(".letra-oculta");
+  if (selector.length <= 0) {
     alert("Ganaste!");
   }
 }

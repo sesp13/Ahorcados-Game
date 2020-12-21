@@ -43,3 +43,4 @@ if (isset($_GET['index'])) {
 <a href="index.php">Volver al menú principal</a>
 
 <?php include_once 'partials/footer.php' ?>
+<script src="js/game.js"></script>
