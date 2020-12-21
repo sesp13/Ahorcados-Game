@@ -1,0 +1,27 @@
+.letra  {
+  padding: 5px;
+  font-size: 30px;
+  /* transition: all 500ms; */
+  font-weight: bold;
+}
+
+.letra-restante:hover {
+  cursor: pointer;
+  color: green;
+}
+
+.letra-usada{
+    color: red;
+}
+
+.letra-oculta{
+    font-size: 40px;
+}
+
+.letra-espacio{
+    padding: 10px;
+}
+
+#ahorcado-img{
+  width: 90%;
+}
