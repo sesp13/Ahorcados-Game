@@ -48,8 +48,16 @@ $espicificaciones = [
     [
         'nombre' => 'Nana',
         'imagen' => '',
-        'frase' => 'Santi venga me va a ayudar con unas cositas de ingles por favor'
+        'frase' => 'Yo quiero frijolitos y chicharron para el viernes, ya no quiero mas ensaladas'
     ],
-    // Frank 
-    // Oscar
+    [
+        'nombre' => 'Oscar',
+        'imagen' => '',
+        'frase' => 'Como quedaron de bonitas las cabras en el pesebre de mi casa'
+    ],
+    [
+        'nombre' => 'Frank',
+        'imagen' => '',
+        'frase' => 'Esta camisa me valio 30 mil pesos en el hueco'
+    ],
 ];

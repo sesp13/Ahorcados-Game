@@ -27,10 +27,11 @@
   width: 90%;
 }
 
-.intro-text{
+.intro-text {
   font-size: 25px;
 }
 
-.word-link{
+.word-link {
   font-size: 30px;
+  display: inline-block;
 }
