@@ -37,10 +37,6 @@ function alfabetoArray() {
     "8",
     "9",
     "0",
-    "¿",
-    "?",
-    "!",
-    "¡"
   ];
 }
 
@@ -115,6 +111,8 @@ function comprobarCaracteresEspeciales(letra) {
     "[",
     "]",
     "'",
+    "?",
+    "¿"
   ];
   return caracteres.includes(letra);
 }

@@ -95,11 +95,6 @@ $espicificaciones = [
         'frase' => 'Por que ayudan a los niños y a las niñas no'
     ],
     [
-        'nombre' => 'Mariana',
-        'imagen' => '',
-        'frase' => 'Por que ayudan a los niños y a las niñas no'
-    ],
-    [
         'nombre' => 'Laura',
         'imagen' => '',
         'frase' => 'Mami por favor prenda el microfono'
