@@ -7,7 +7,6 @@ if (listado != null) {
 }
 
 $(".frase").click(function (event) {
-  event.preventDefault();
   let listado = localStorage.getItem("listado-frases");
   let selector = $(this);
   if (listado == null) {
