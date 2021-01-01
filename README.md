@@ -1,2 +1,2 @@
 # Ahorcados Game
- Juego personalizable de ahorados
+ Juego personalizable de ahorcados
